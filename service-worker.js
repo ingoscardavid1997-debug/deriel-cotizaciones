@@ -1,7 +1,8 @@
-const CACHE_NAME = "deriel-cotizaciones-v1";
+const CACHE_NAME = "deriel-cotizaciones-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
+  "./logo-deriel-encabezado.svg",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
