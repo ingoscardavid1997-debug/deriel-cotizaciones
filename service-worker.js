@@ -1,11 +1,12 @@
-const CACHE_NAME = "deriel-cotizaciones-v3";
+const CACHE_NAME = "deriel-cotizaciones-v4";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./logo-deriel-encabezado.svg",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icons/icon-512.png",
+  "https://raw.githubusercontent.com/ingoscardavid1997-debug/deriel-catalogo/main/logo-deriel.jpg"
 ];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));
@@ -20,7 +21,7 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
   const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin) return;
+  if (url.origin !== self.location.origin && url.href !== "https://raw.githubusercontent.com/ingoscardavid1997-debug/deriel-catalogo/main/logo-deriel.jpg") return;
   event.respondWith(
     caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
       if (response && response.ok) {
