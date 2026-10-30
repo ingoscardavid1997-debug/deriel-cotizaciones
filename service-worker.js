@@ -1,4 +1,4 @@
-const CACHE_NAME = "deriel-cotizaciones-v2";
+const CACHE_NAME = "deriel-cotizaciones-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
