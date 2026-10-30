@@ -1,4 +1,4 @@
-const CACHE_NAME = "deriel-cotizaciones-v4";
+const CACHE_NAME = "deriel-cotizaciones-v5";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -6,6 +6,7 @@ const APP_SHELL = [
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
+  "./icons/tire-icon.svg",
   "https://raw.githubusercontent.com/ingoscardavid1997-debug/deriel-catalogo/main/logo-deriel.jpg"
 ];
 self.addEventListener("install", event => {
