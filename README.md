@@ -2,20 +2,21 @@
 
 Aplicación independiente de Deriel Control.
 
-## Publicar con GitHub Pages
-1. En el repositorio, abre **Settings → Pages**.
-2. En **Build and deployment**, selecciona **Deploy from a branch**.
-3. Selecciona la rama **main** y la carpeta **/(root)**. Guarda.
-4. Espera a que GitHub Pages publique el sitio.
+## Publicar en GitHub Pages
+1. Crear un repositorio público llamado `deriel-cotizaciones`.
+2. Subir todos los archivos y carpetas de este paquete a la raíz del repositorio.
+3. En GitHub: Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save.
+4. Esperar a que GitHub Pages publique el sitio.
 
-URL esperada:
+Dirección esperada:
 https://ingoscardavid1997-debug.github.io/deriel-cotizaciones/
 
 ## Instalar
-- Android: abre la URL en Chrome, menú ⋮ → **Instalar aplicación** o **Añadir a pantalla principal**.
-- PC: abre la URL en Chrome o Edge y usa el icono **Instalar** de la barra de direcciones.
+- Android: abrir la dirección en Chrome → menú ⋮ → Instalar aplicación / Añadir a pantalla principal.
+- PC: abrir en Chrome o Edge → icono Instalar en la barra de direcciones.
 
-## Datos y modo sin conexión
-El service worker almacena los recursos de la app. El historial se guarda localmente en el navegador/dispositivo y no se sincroniza entre equipos. La primera visita requiere conexión.
+## Funcionamiento sin conexión
+El service worker almacena la app shell. Las cotizaciones se guardan en el almacenamiento local del navegador/dispositivo; no se sincronizan entre dispositivos.
 
-El logo y el QR están incluidos dentro de index.html.
+## Nota
+El QR y el logo están embebidos en `index.html`. El service worker cachea la aplicación. La primera visita necesita conexión para descargarla.
